@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Niek Nigg - Portfolio</title>
+    <meta name="description" content="Portfolio site of Niek Nigg - security, GRC, and AI engineering leader." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+      :root { --bg:#0b0c10; --card:#111218; --ink:#e6e6e6; --muted:#b6b6b6; --acc:#4fd1c5; }
+      * { box-sizing: border-box; }
+      html, body { margin:0; padding:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--ink); }
+      a { color: var(--acc); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .wrap { max-width: 1000px; margin: 0 auto; padding: 28px 20px 64px; }
+      header { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:16px 0 8px; position:sticky; top:0; background: linear-gradient(180deg, rgba(11,12,16,0.95) 60%, rgba(11,12,16,0)); backdrop-filter: blur(6px); z-index:10; }
+      .brand { display:flex; align-items:center; gap:14px; }
+      .avatar { width:56px; height:56px; border-radius:50%; background:linear-gradient(135deg, #2dd4bf, #60a5fa); display:grid; place-items:center; font-weight:800; }
+      nav { display:flex; gap:16px; flex-wrap:wrap; }
+      nav a { padding:8px 12px; background:#0f1116; border:1px solid #1d2028; border-radius:10px; font-weight:600; }
+      h1 { font-size:40px; letter-spacing:-0.6px; margin:14px 0 10px; }
+      h2 { font-size:24px; margin:26px 0 12px; letter-spacing:-0.2px; }
+      p { line-height:1.7; color:var(--muted); }
+      .card { background:var(--card); border:1px solid #1b1d24; border-radius:16px; padding:20px; }
+      .grid { display:grid; grid-template-columns: repeat(12, 1fr); gap:16px; }
+      .span-8 { grid-column: span 8; }
+      .span-4 { grid-column: span 4; }
+      @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } .span-8, .span-4 { grid-column: auto; } header { position: static; } }
+      .pill { display:inline-block; padding:6px 10px; border:1px solid #2a2e37; border-radius:999px; font-size:12px; color:#cbd5e1; margin-right:6px; }
+      ul.clean { list-style:none; padding:0; margin:0; }
+      li.item { padding:14px 0; border-bottom:1px dashed #242633; }
+      li.item:last-child { border-bottom:none; }
+      .when { color:#9aa3b2; font-size:13px; }
+      footer { margin-top:42px; padding-top:18px; border-top:1px dashed #232634; color:#9aa3b2; font-size:14px; }
+      .cta { display:inline-block; padding:12px 16px; border-radius:12px; background:#0f1116; border:1px solid #1d2028; font-weight:700; }
+      .cta:hover { background:#121622; }
+      .hero { display:flex; flex-direction:column; gap:8px; }
+      .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background:#0f1116; border:1px solid #232634; padding:2px 6px; border-radius:6px; font-size:12px; color:#d1d5db; }
+      .tags { margin-top:8px; }
+      .socials { display:flex; gap:10px; flex-wrap:wrap; }
+      .socials a { padding:8px 10px; border:1px solid #232634; border-radius:8px; background:#0f1116; }
+      .sr-only { position:absolute; left:-9999px; }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Niek Nigg",
+      "jobTitle": "Security and GRC Leader",
+      "knowsAbout": ["GRC", "Information Security", "AI", "Risk Management"],
+      "url": "https://davera-ai.github.io/",
+      "email": "mailto:niek@davera.ai",
+      "sameAs": [
+        "https://www.linkedin.com/in/nieknigg/",
+        "https://github.com/daVera-ai"
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="brand">
+          <div class="avatar" aria-hidden="true">NN</div>
+          <div>
+            <div class="pill">Security - GRC - AI</div>
+            <h1>Niek Nigg</h1>
+            <p style="margin:0">Security and GRC leader building AI native compliance platforms. Based in Austria.</p>
+          </div>
+        </div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#speaking">Speaking</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <section id="about" class="grid" style="margin-top:18px; align-items:start;">
+        <div class="span-8 card hero">
+          <h2>About</h2>
+          <p>
+            I help companies turn governance, risk, and compliance into a product capability. I have led security and risk teams in high growth environments and I am currently building the <strong>daVera Project</strong> - an agentic AI platform for automated policy, control mapping, and audit readiness.
+          </p>
+          <div class="tags">
+            <span class="pill">GRC Engineering</span>
+            <span class="pill">Security Strategy</span>
+            <span class="pill">AI Automation</span>
+            <span class="pill">Risk Analytics</span>
+          </div>
+          <p>
+            Highlights include building AI assisted controls management, orchestrating cross functional audits, and leading programs that let engineers focus on shipping while staying compliant.
+          </p>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/nieknigg/" rel="me">LinkedIn</a>
+            <a href="https://github.com/daVera-ai" rel="me">GitHub</a>
+            <a href="mailto:niek@davera.ai">Email</a>
+          </div>
+        </div>
+        <aside class="span-4 card">
+          <h2>Quick facts</h2>
+          <ul class="clean">
+            <li class="item"><strong>Location:</strong> Austria</li>
+            <li class="item"><strong>Focus:</strong> Security, GRC, AI</li>
+            <li class="item"><strong>Open to:</strong> early pilots, speaking, advisory</li>
+            <li class="item"><strong>Languages:</strong> English, Dutch, German, Afrikaans</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="experience" style="margin-top:24px" class="card">
+        <h2>Experience</h2>
+        <ul class="clean">
+          <li class="item">
+            <strong>Klarna</strong> - Chief Security Risk Officer
+            <div class="when">Global fintech - led risk, compliance engineering, and AI adoption</div>
+            <p>Built programs that reduced manual compliance work with automation. Partnered with engineering to embed controls into SDLC and cloud platforms.</p>
+          </li>
+          <li class="item">
+            <strong>University of Luxembourg</strong> - Information Security Officer
+            <div class="when">Enterprise security, policy and risk management</div>
+          </li>
+          <li class="item">
+            <strong>International Atomic Energy Agency</strong> - Security roles
+            <div class="when">High assurance environments and risk analytics</div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="speaking" style="margin-top:24px" class="card">
+        <h2>Speaking</h2>
+        <ul class="clean">
+          <li class="item"><strong>VantaCon UK 2025</strong> - CISO panel on modern compliance and AI</li>
+        </ul>
+      </section>
+
+      <section id="projects" style="margin-top:24px" class="card">
+        <h2>Projects</h2>
+        <ul class="clean">
+          <li class="item"><strong>daVera Project</strong> - AI native GRC platform for policy automation, control mapping, and audit prep.</li>
+        </ul>
+      </section>
+
+      <section id="education" style="margin-top:24px" class="card">
+        <h2>Education</h2>
+        <ul class="clean">
+          <li class="item"><strong>Tilburg University</strong> - Economics and Management</li>
+        </ul>
+      </section>
+
+      <section id="contact" style="margin-top:24px" class="card">
+        <h2>Contact</h2>
+        <p>Email <a href="mailto:niek@davera.ai">niek@davera.ai</a> or connect on <a href="https://www.linkedin.com/in/nieknigg/">LinkedIn</a>. For quick context, mention which topic you want to discuss and your timeline.</p>
+        <p><a class="cta" href="/Niek-Nigg-CV.pdf">Download CV</a> <span class="when">Place your PDF in the repo at the root with that filename.</span></p>
+      </section>
+
+      <footer>
+        © <span id="y"></span> Niek Nigg. Built with GitHub Pages.
+      </footer>
+    </div>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

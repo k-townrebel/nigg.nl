@@ -1,167 +1,283 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Niek Nigg - Portfolio</title>
-    <meta name="description" content="Portfolio site of Niek Nigg - security, GRC, and AI engineering leader." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-      :root { --bg:#0b0c10; --card:#111218; --ink:#e6e6e6; --muted:#b6b6b6; --acc:#4fd1c5; }
-      * { box-sizing: border-box; }
-      html, body { margin:0; padding:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--ink); }
-      a { color: var(--acc); text-decoration: none; }
-      a:hover { text-decoration: underline; }
-      .wrap { max-width: 1000px; margin: 0 auto; padding: 28px 20px 64px; }
-      header { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:16px 0 8px; position:sticky; top:0; background: linear-gradient(180deg, rgba(11,12,16,0.95) 60%, rgba(11,12,16,0)); backdrop-filter: blur(6px); z-index:10; }
-      .brand { display:flex; align-items:center; gap:14px; }
-      .avatar { width:56px; height:56px; border-radius:50%; background:linear-gradient(135deg, #2dd4bf, #60a5fa); display:grid; place-items:center; font-weight:800; }
-      nav { display:flex; gap:16px; flex-wrap:wrap; }
-      nav a { padding:8px 12px; background:#0f1116; border:1px solid #1d2028; border-radius:10px; font-weight:600; }
-      h1 { font-size:40px; letter-spacing:-0.6px; margin:14px 0 10px; }
-      h2 { font-size:24px; margin:26px 0 12px; letter-spacing:-0.2px; }
-      p { line-height:1.7; color:var(--muted); }
-      .card { background:var(--card); border:1px solid #1b1d24; border-radius:16px; padding:20px; }
-      .grid { display:grid; grid-template-columns: repeat(12, 1fr); gap:16px; }
-      .span-8 { grid-column: span 8; }
-      .span-4 { grid-column: span 4; }
-      @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } .span-8, .span-4 { grid-column: auto; } header { position: static; } }
-      .pill { display:inline-block; padding:6px 10px; border:1px solid #2a2e37; border-radius:999px; font-size:12px; color:#cbd5e1; margin-right:6px; }
-      ul.clean { list-style:none; padding:0; margin:0; }
-      li.item { padding:14px 0; border-bottom:1px dashed #242633; }
-      li.item:last-child { border-bottom:none; }
-      .when { color:#9aa3b2; font-size:13px; }
-      footer { margin-top:42px; padding-top:18px; border-top:1px dashed #232634; color:#9aa3b2; font-size:14px; }
-      .cta { display:inline-block; padding:12px 16px; border-radius:12px; background:#0f1116; border:1px solid #1d2028; font-weight:700; }
-      .cta:hover { background:#121622; }
-      .hero { display:flex; flex-direction:column; gap:8px; }
-      .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background:#0f1116; border:1px solid #232634; padding:2px 6px; border-radius:6px; font-size:12px; color:#d1d5db; }
-      .tags { margin-top:8px; }
-      .socials { display:flex; gap:10px; flex-wrap:wrap; }
-      .socials a { padding:8px 10px; border:1px solid #232634; border-radius:8px; background:#0f1116; }
-      .sr-only { position:absolute; left:-9999px; }
-    </style>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Niek Nigg",
-      "jobTitle": "Security and GRC Leader",
-      "knowsAbout": ["GRC", "Information Security", "AI", "Risk Management"],
-      "url": "https://davera-ai.github.io/",
-      "email": "mailto:niek@davera.ai",
-      "sameAs": [
-        "https://www.linkedin.com/in/nieknigg/",
-        "https://github.com/daVera-ai"
-      ]
-    }
-    </script>
-  </head>
-  <body>
-    <div class="wrap">
-      <header>
-        <div class="brand">
-          <div class="avatar" aria-hidden="true">NN</div>
-          <div>
-            <div class="pill">Security - GRC - AI</div>
-            <h1>Niek Nigg</h1>
-            <p style="margin:0">Security and GRC leader building AI native compliance platforms. Based in Austria.</p>
-          </div>
-        </div>
-        <nav>
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#speaking">Speaking</a>
-          <a href="#projects">Projects</a>
-          <a href="#education">Education</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Niek J. Nigg — Security & GRC Leader</title>
+  <meta name="description" content="Niek J. Nigg — C-level security & GRC leader building systems that reduce real risk." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-      <section id="about" class="grid" style="margin-top:18px; align-items:start;">
-        <div class="span-8 card hero">
-          <h2>About</h2>
-          <p>
-            I help companies turn governance, risk, and compliance into a product capability. I have led security and risk teams in high growth environments and I am currently building the <strong>daVera Project</strong> - an agentic AI platform for automated policy, control mapping, and audit readiness.
-          </p>
-          <div class="tags">
-            <span class="pill">GRC Engineering</span>
-            <span class="pill">Security Strategy</span>
-            <span class="pill">AI Automation</span>
-            <span class="pill">Risk Analytics</span>
-          </div>
-          <p>
-            Highlights include building AI assisted controls management, orchestrating cross functional audits, and leading programs that let engineers focus on shipping while staying compliant.
-          </p>
-          <div class="socials">
-            <a href="https://www.linkedin.com/in/nieknigg/" rel="me">LinkedIn</a>
-            <a href="https://github.com/daVera-ai" rel="me">GitHub</a>
-            <a href="mailto:niek@davera.ai">Email</a>
-          </div>
-        </div>
-        <aside class="span-4 card">
-          <h2>Quick facts</h2>
-          <ul class="clean">
-            <li class="item"><strong>Location:</strong> Austria</li>
-            <li class="item"><strong>Focus:</strong> Security, GRC, AI</li>
-            <li class="item"><strong>Open to:</strong> early pilots, speaking, advisory</li>
-            <li class="item"><strong>Languages:</strong> English, Dutch, German, Afrikaans</li>
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <a class="logo" href="#top" aria-label="Niek J. Nigg">NJN</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#thinking">Thinking</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section hero" id="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">C-level security &amp; GRC leader</p>
+          <h1 id="hero-title">Niek J. Nigg</h1>
+          <p class="lead">C-level security &amp; GRC leader building systems that reduce real risk — not just audit anxiety.</p>
+          <p>I design threat-driven security programs, scale governance in complex organisations, and turn compliance into engineering. Currently building daVera and helping shape the future of GRC and Governance Engineering.</p>
+          <ul class="hero-roles">
+            <li><span class="keycap">CEO &amp; Co-Founder, daVera · GRC Engineering Advocate</span></li>
+            <li><span class="keycap">Co-Founder, CtrlCon</span></li>
+            <li><span class="keycap">Senior Lecturer, Johannes Kepler University Linz</span></li>
+            <li><span class="keycap">Former Chief Security Risk Officer &amp; Chief Information Security Officer, Klarna</span></li>
+            <li><span class="keycap">Former United Nations</span></li>
+            <li><span class="keycap">Seiterndorf, Austria</span></li>
           </ul>
-        </aside>
-      </section>
+          <div class="cta-row">
+            <a class="btn" href="#" aria-label="View CV">View CV</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/nieknigg/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="hero-panel reveal">
+          <div class="panel-card">
+            <h2>At a glance</h2>
+            <p class="microcopy">Calm by nature. Opinionated by experience. Always hands-on.</p>
+            <div class="divider"></div>
+            <div class="keycap-row">
+              <span class="keycap">Threat-driven</span>
+              <span class="keycap">Controls</span>
+              <span class="keycap">Evidence</span>
+              <span class="keycap">Culture</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section id="experience" style="margin-top:24px" class="card">
-        <h2>Experience</h2>
-        <ul class="clean">
-          <li class="item">
-            <strong>Klarna</strong> - Chief Security Risk Officer
-            <div class="when">Global fintech - led risk, compliance engineering, and AI adoption</div>
-            <p>Built programs that reduced manual compliance work with automation. Partnered with engineering to embed controls into SDLC and cloud platforms.</p>
-          </li>
-          <li class="item">
-            <strong>University of Luxembourg</strong> - Information Security Officer
-            <div class="when">Enterprise security, policy and risk management</div>
-          </li>
-          <li class="item">
-            <strong>International Atomic Energy Agency</strong> - Security roles
-            <div class="when">High assurance environments and risk analytics</div>
-          </li>
-        </ul>
-      </section>
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">What I Do</h2>
+        </div>
+        <div class="grid two-col">
+          <article class="card reveal">
+            <p>I work at the intersection of:</p>
+            <ul class="pill-grid">
+              <li><span class="pill">Information Security</span></li>
+              <li><span class="pill">Governance, Risk &amp; Compliance</span></li>
+              <li><span class="pill">Organisational design</span></li>
+              <li><span class="pill">Automation &amp; GenAI</span></li>
+              <li><span class="pill">Culture change at scale</span></li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <p class="statement">My focus is simple:</p>
+            <p class="statement emphasis">Build security programs that actually reduce risk.</p>
+            <p>Not slide decks. Not checkbox factories.<br />Real controls. Real data. Real ownership.</p>
+            <p>I believe GRC is an engineering problem — and should be treated like one.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <section id="speaking" style="margin-top:24px" class="card">
-        <h2>Speaking</h2>
-        <ul class="clean">
-          <li class="item"><strong>VantaCon UK 2025</strong> - CISO panel on modern compliance and AI</li>
-        </ul>
-      </section>
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">Current work</p>
+          <h2 id="work-title">Current Work</h2>
+        </div>
+        <div class="grid two-col">
+          <article class="card reveal">
+            <h3>daVera — Founder &amp; CEO</h3>
+            <p class="subtle">AI-powered Governance Engineering platform</p>
+            <p>daVera is my current venture: a new kind of GRC platform that treats governance as infrastructure.</p>
+            <p>It’s built around three principles:</p>
+            <ul class="list">
+              <li>Threat-driven, not audit-driven</li>
+              <li>Controls as living systems, not static documents</li>
+              <li>Evidence and insight as data pipelines, not manual toil</li>
+            </ul>
+            <p>The goal is to give organisations a way to build security programs instead of performing them.</p>
+          </article>
+          <article class="card reveal">
+            <h3>CtrlCon — Side Project</h3>
+            <p class="subtle">Community-driven GRC events</p>
+            <p>CtrlCon is a global, practitioner-led event series for people who are done with compliance theatre.</p>
+            <p>It’s where security engineers, GRC practitioners, and builders meet to talk about:</p>
+            <ul class="list">
+              <li>Controls that actually work</li>
+              <li>Automation patterns</li>
+              <li>Threat-driven design</li>
+              <li>The messy reality of scaling security</li>
+            </ul>
+            <p>No vendor theatre. No buzzword bingo. Just real conversations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <section id="projects" style="margin-top:24px" class="card">
-        <h2>Projects</h2>
-        <ul class="clean">
-          <li class="item"><strong>daVera Project</strong> - AI native GRC platform for policy automation, control mapping, and audit prep.</li>
-        </ul>
-      </section>
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">Experience</p>
+          <h2 id="experience-title">Experience</h2>
+        </div>
+        <div class="grid two-col">
+          <article class="card reveal">
+            <h3>Klarna Group — Chief Security Risk Officer</h3>
+            <p class="subtle">2022–2025</p>
+            <ul class="list">
+              <li>Designed and implemented Klarna’s global security and GRC model</li>
+              <li>Built a unified, business-aligned ISMS across all markets</li>
+              <li>Repositioned the second line from “audit layer” to engineering partner</li>
+              <li>Shifted large parts of GRC to GenAI-powered automation</li>
+              <li>Reported directly to the Board on group-wide risk posture</li>
+            </ul>
+            <p class="note">Built during a period of extreme organisational change and downsizing.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Klarna Inc. — Chief Information Security Officer</h3>
+            <p class="subtle">2024–2025</p>
+            <ul class="list">
+              <li>Built the full U.S. security program from scratch</li>
+              <li>Delivered FFIEC, NYDFS, SOX, and NIST-aligned controls</li>
+              <li>Supported multi-state banking licences</li>
+              <li>Integrated GenAI into audit and control workflows</li>
+              <li>Bridged U.S. regulatory reality with global group strategy</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>University of Luxembourg — Chief Information Security Officer</h3>
+            <p class="subtle">2021–2022</p>
+            <ul class="list">
+              <li>Built the university’s first formal security program</li>
+              <li>Implemented Zero Trust in a decentralised academic environment</li>
+              <li>Created a university-wide security culture</li>
+              <li>Balanced academic freedom with modern security standards</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>International Atomic Energy Agency — Information Security Officer</h3>
+            <p class="subtle">2018–2021</p>
+            <ul class="list">
+              <li>Rolled out ISO27001 ISMS across a UN organisation</li>
+              <li>Reduced phishing susceptibility from 38% to 6%</li>
+              <li>Introduced data-driven security operations</li>
+              <li>Deployed ML-based threat classification</li>
+            </ul>
+            <p class="note">Earlier roles at IAEA, Accenture, and Maastricht University shaped my engineering mindset.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <section id="education" style="margin-top:24px" class="card">
-        <h2>Education</h2>
-        <ul class="clean">
-          <li class="item"><strong>Tilburg University</strong> - Economics and Management</li>
-        </ul>
-      </section>
+    <section class="section" id="thinking" aria-labelledby="thinking-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">How I Think</p>
+          <h2 id="thinking-title">How I Think</h2>
+        </div>
+        <div class="grid two-col">
+          <article class="card reveal">
+            <p class="statement">A few principles that guide my work:</p>
+            <ul class="list">
+              <li>Compliance should be threat-driven, not audit-driven</li>
+              <li>GRC is a data and systems problem</li>
+              <li>Controls should be continuously observable</li>
+              <li>Evidence collection is infrastructure</li>
+              <li>Culture beats policy</li>
+              <li>Automation beats heroics</li>
+              <li>Security must fit how people actually work</li>
+            </ul>
+          </article>
+          <article class="card highlight reveal">
+            <p class="statement emphasis">I optimise for risk reduction, not audit performance.</p>
+            <div class="keycap-row">
+              <span class="keycap">Threat-driven</span>
+              <span class="keycap">Continuously observable</span>
+              <span class="keycap">Evidence</span>
+              <span class="keycap">Culture</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <section id="contact" style="margin-top:24px" class="card">
-        <h2>Contact</h2>
-        <p>Email <a href="mailto:niek@davera.ai">niek@davera.ai</a> or connect on <a href="https://www.linkedin.com/in/nieknigg/">LinkedIn</a>. For quick context, mention which topic you want to discuss and your timeline.</p>
-        <p><a class="cta" href="/Niek-Nigg-CV.pdf">Download CV</a> <span class="when">Place your PDF in the repo at the root with that filename.</span></p>
-      </section>
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">Education &amp; Credentials</p>
+          <h2 id="education-title">Education &amp; Credentials</h2>
+        </div>
+        <div class="grid two-col">
+          <article class="card reveal">
+            <ul class="list">
+              <li>Long-term PhD Candidate — Applied Informatics</li>
+              <li>CISSP</li>
+              <li>MSc in Information Systems &amp; Economics</li>
+              <li>ISO27001 Lead Implementer</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Languages</h3>
+            <p>Fluent in Dutch, English, and German.<br />Professional working knowledge of French and Italian.</p>
+            <div class="divider"></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <footer>
-        © <span id="y"></span> Niek Nigg. Built with GitHub Pages.
-      </footer>
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Contact</h2>
+        </div>
+        <div class="grid two-col">
+          <article class="card reveal">
+            <h3>Get in touch</h3>
+            <p>Email: <a href="mailto:niek@nigg.nl">niek@nigg.nl</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/nieknigg/" target="_blank" rel="noreferrer">linkedin.com/in/nieknigg</a></p>
+            <div class="cta-row">
+              <a class="btn" href="mailto:niek@nigg.nl">Email</a>
+              <a class="btn ghost" href="https://www.linkedin.com/in/nieknigg/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </article>
+          <article class="card reveal">
+            <h3>If you’re:</h3>
+            <ul class="list">
+              <li>Building security at scale</li>
+              <li>Rethinking GRC</li>
+              <li>Designing risk as infrastructure</li>
+              <li>Or just tired of compliance theatre</li>
+            </ul>
+            <p>I’m always happy to talk.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Niek J. Nigg.</p>
     </div>
-    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-  </body>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <script src="main.js"></script>
+</body>
 </html>
